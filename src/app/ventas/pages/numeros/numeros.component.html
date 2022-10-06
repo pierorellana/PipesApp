@@ -1,0 +1,48 @@
+<div>
+    <h1>Pipes de Decimal y Porcentajes</h1>
+    <p>Estos son pipes incluidos en Angular - Usualmente están incluidos en el Common Module</p>
+</div>
+
+<h2>Forma de escribir los pipes</h2>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="NumberPipe">
+            <ul>
+                <li>(ventas + 9000000) | number: '1.2-2'</li>
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="CurrencyPipe">
+            <ul>
+                <li>(ventas + 232000000) | currency: 'USD': 'symbol-narrow': '1.0-4'</li>
+            </ul>
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="PercentPipe">
+            <ul>
+                <li>porcentaje | percent: '2.2-2'</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
+
+<h2>Resultados</h2>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="NumberPipe" subheader="Ventas del mes de Agosto"><i class="pi pi-dollar"></i>{{ (ventas + 9000000) | number: '1.2-2' }}</p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="CurrencyPipe" subheader="Ventas del mes de Diciembre">{{ (ventas + 232000000) | currency: 'USD': 'symbol-narrow': '1.0-4' }}</p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="PercentPipe" subheader="Ganancias Porcentuales de las ventas">{{ porcentaje | percent: '2.2-2'}}</p-card>
+    </div>
+</div>
